@@ -1,25 +1,31 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { useEffect } from 'react'
+import PropTypes from 'prop-types'
+import { useDispatch } from 'react-redux'
 
-function App() {
+import * as types from './actions/login/loginActions'
+import { isLogin } from './utils/token'
+
+import Header from './pages/Header'
+
+function App (props) {
+  const dispatch = useDispatch()
+
+  useEffect(() => {
+    if (isLogin()) {
+      dispatch(types.loginCheckTokenSuccess())
+    }
+  }, [dispatch])
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <Header/>
+      {props.children}
     </div>
-  );
+  )
 }
 
-export default App;
+App.propTypes = {
+  children: PropTypes.object.isRequired
+}
+
+export default App
