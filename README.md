@@ -1,13 +1,15 @@
-# Para probar el login se puede usar este email con cualquier contraseña
+# To use the login succesfully you can enter this email with any password:
 
 email: george.bluth@reqres.in
 
 # Al editar se muestra la fecha de edición recibida de la api en el dashboard
+# When you edit a user the date received from the api is displayed in the dashboard
 
-# Al borrar se recibe el status code 200 esperado
-# El login guarda el token recibido de la api en el localStorage y de esa forma se accede a la app 
+# Status code 200 received after succesful deletion of user
 
-# Tecnologías usadas: 
+# The login stores the received token from the api in browser's local storage
+
+# Technologies used:
 
 React
 Hooks
