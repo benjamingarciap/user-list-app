@@ -54,9 +54,11 @@ export default function LandingPage () {
       <StyledCenterContainer>
         <StyledHero>
             <StyledHeroTitle>User list</StyledHeroTitle>
-            <StyledHeroParagraph>Multiple lines of text that form the lede,
-              informing new readers quickly and efficiently about what’s most
-              interesting in this post’s contents.
+            <StyledHeroParagraph>Bacon ipsum dolor amet rump ham
+              porchetta alcatra shoulder shankle, t-bone
+              frankfurter drumstick chicken
+              filet mignon. Frankfurter drumstick beef ribs porchetta,
+              sausage bresaola meatball cow tenderloin spare ribs pork chop.
             </StyledHeroParagraph>
             <StyledLink to="/login">Login now!</StyledLink>
         </StyledHero>
